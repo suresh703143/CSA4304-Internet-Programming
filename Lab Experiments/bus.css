@@ -1,0 +1,183 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#0066cc;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+section{
+width:90%;
+margin:30px auto;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 8px gray;
+}
+
+h2{
+text-align:center;
+color:#0066cc;
+margin-bottom:20px;
+}
+
+.search{
+text-align:center;
+}
+
+.search input{
+width:300px;
+padding:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.search button{
+padding:10px 20px;
+background:green;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.search button:hover{
+background:darkgreen;
+}
+
+.bus-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.bus-card{
+width:280px;
+border:1px solid #ccc;
+padding:15px;
+border-radius:8px;
+text-align:center;
+background:#fafafa;
+}
+
+.bus-card:hover{
+box-shadow:0 0 10px gray;
+}
+
+.bus-card h3{
+color:#0066cc;
+margin-bottom:10px;
+}
+
+.bus-card p{
+margin:8px 0;
+}
+
+.bus-card button{
+margin-top:10px;
+padding:10px 20px;
+background:#0066cc;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.bus-card button:hover{
+background:#004c99;
+}
+
+.features ul{
+margin-left:30px;
+line-height:35px;
+font-size:18px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:60%;
+padding:10px;
+margin:10px;
+border:1px solid gray;
+border-radius:5px;
+}
+
+.contact textarea{
+height:100px;
+}
+
+.contact button{
+padding:10px 25px;
+background:green;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.contact button:hover{
+background:darkgreen;
+}
+
+footer{
+background:#0066cc;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+
+nav a{
+display:block;
+margin:10px;
+}
+
+.search input,
+.contact input,
+.contact textarea{
+width:90%;
+}
+
+.bus-container{
+flex-direction:column;
+align-items:center;
+}
+
+.bus-card{
+width:90%;
+}
+
+}

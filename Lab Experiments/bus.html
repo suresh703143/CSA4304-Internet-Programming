@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Bus Ticket Booking System</title>
+<link rel="stylesheet" href="bus.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>ONLINE BUS TICKET BOOKING SYSTEM</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#search">Search Bus</a>
+<a href="#buses">Buses</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="search" id="search">
+
+<h2>Search Bus</h2>
+
+<input type="text" id="route" placeholder="Enter Destination">
+
+<button onclick="searchBus()">Search</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="bus-container" id="buses">
+
+<h2>Available Buses</h2>
+
+<div class="bus-card">
+
+<h3 class="bus">Chennai - Bangalore</h3>
+
+<p><b>Bus:</b> Orange Travels</p>
+
+<p><b>Time:</b> 9:00 PM</p>
+
+<p><b>Seats:</b> 20 Available</p>
+
+<button onclick="bookBus('Chennai - Bangalore')">Book Ticket</button>
+
+</div>
+
+<div class="bus-card">
+
+<h3 class="bus">Hyderabad - Chennai</h3>
+
+<p><b>Bus:</b> KPN Travels</p>
+
+<p><b>Time:</b> 8:00 PM</p>
+
+<p><b>Seats:</b> 15 Available</p>
+
+<button onclick="bookBus('Hyderabad - Chennai')">Book Ticket</button>
+
+</div>
+
+<div class="bus-card">
+
+<h3 class="bus">Vijayawada - Chennai</h3>
+
+<p><b>Bus:</b> SRM Travels</p>
+
+<p><b>Time:</b> 10:30 PM</p>
+
+<p><b>Seats:</b> 12 Available</p>
+
+<button onclick="bookBus('Vijayawada - Chennai')">Book Ticket</button>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>User Features</h2>
+
+<ul>
+<li>User Registration</li>
+<li>User Login</li>
+<li>Search Bus</li>
+<li>Select Seats</li>
+<li>Book Tickets</li>
+<li>View Booking History</li>
+<li>Online Payment</li>
+<li>Booking Confirmation</li>
+</ul>
+
+</section>
+
+<section class="features">
+
+<h2>Admin Features</h2>
+
+<ul>
+<li>Admin Login</li>
+<li>Add Bus</li>
+<li>Update Bus Schedule</li>
+<li>Delete Bus</li>
+<li>Manage Seat Availability</li>
+<li>Manage User Accounts</li>
+</ul>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name" required>
+
+<input type="email" placeholder="Enter Email" required>
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Online Bus Ticket Booking System</p>
+
+</footer>
+
+<script>
+
+function searchBus(){
+
+let input=document.getElementById("route").value.toLowerCase();
+
+let buses=document.getElementsByClassName("bus");
+
+let found=false;
+
+for(let i=0;i<buses.length;i++){
+
+let name=buses[i].innerHTML.toLowerCase();
+
+if(name.includes(input) || input==""){
+
+buses[i].parentElement.style.display="block";
+
+if(input!="")
+found=true;
+
+}
+else{
+
+buses[i].parentElement.style.display="none";
+
+}
+
+}
+
+if(input==""){
+
+document.getElementById("result").innerHTML="";
+
+}
+else if(found){
+
+document.getElementById("result").innerHTML="<span style='color:green;'>Bus Found</span>";
+
+}
+else{
+
+document.getElementById("result").innerHTML="<span style='color:red;'>Bus Not Found</span>";
+
+}
+
+}
+
+function bookBus(route){
+
+alert("Ticket Booked Successfully!\nRoute: "+route);
+
+}
+
+</script>
+
+</body>
+</html>

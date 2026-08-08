@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Train Reservation System</title>
+<link rel="stylesheet" href="train.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>ONLINE TRAIN RESERVATION SYSTEM</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#search">Search Train</a>
+<a href="#trains">Trains</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="search" id="search">
+
+<h2>Search Train</h2>
+
+<input type="text" id="route" placeholder="Enter Destination">
+
+<button onclick="searchTrain()">Search</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="train-container" id="trains">
+
+<h2>Available Trains</h2>
+
+<div class="train-card">
+
+<h3 class="train">Chennai - Bangalore Express</h3>
+
+<p><b>Train No:</b>12607</p>
+
+<p><b>Time:</b>07:30 AM</p>
+
+<p><b>Class:</b>Sleeper / AC</p>
+
+<p><b>Seats:</b>45 Available</p>
+
+<button onclick="bookTrain('Chennai - Bangalore Express')">Book Ticket</button>
+
+</div>
+
+<div class="train-card">
+
+<h3 class="train">Hyderabad - Chennai Express</h3>
+
+<p><b>Train No:</b>12760</p>
+
+<p><b>Time:</b>08:45 PM</p>
+
+<p><b>Class:</b>Sleeper / AC</p>
+
+<p><b>Seats:</b>30 Available</p>
+
+<button onclick="bookTrain('Hyderabad - Chennai Express')">Book Ticket</button>
+
+</div>
+
+<div class="train-card">
+
+<h3 class="train">Vijayawada - Chennai Express</h3>
+
+<p><b>Train No:</b>12839</p>
+
+<p><b>Time:</b>10:15 PM</p>
+
+<p><b>Class:</b>Sleeper / AC</p>
+
+<p><b>Seats:</b>20 Available</p>
+
+<button onclick="bookTrain('Vijayawada - Chennai Express')">Book Ticket</button>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>User Features</h2>
+
+<ul>
+<li>User Registration</li>
+<li>User Login</li>
+<li>Search Train</li>
+<li>Select Seats</li>
+<li>Book Tickets</li>
+<li>View Booking History</li>
+<li>Print Ticket</li>
+<li>Online Payment</li>
+</ul>
+
+</section>
+
+<section class="features">
+
+<h2>Admin Features</h2>
+
+<ul>
+<li>Admin Login</li>
+<li>Add Train</li>
+<li>Update Train Schedule</li>
+<li>Delete Train</li>
+<li>Manage Seat Availability</li>
+<li>Manage User Accounts</li>
+</ul>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name">
+
+<input type="email" placeholder="Enter Email">
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Online Train Reservation System</p>
+
+</footer>
+
+<script>
+
+function searchTrain(){
+
+let input=document.getElementById("route").value.toLowerCase();
+
+let trains=document.getElementsByClassName("train");
+
+let found=false;
+
+for(let i=0;i<trains.length;i++){
+
+let name=trains[i].innerHTML.toLowerCase();
+
+if(name.includes(input) || input==""){
+
+trains[i].parentElement.style.display="block";
+
+if(input!="")
+found=true;
+
+}
+
+else{
+
+trains[i].parentElement.style.display="none";
+
+}
+
+}
+
+if(input==""){
+
+document.getElementById("result").innerHTML="";
+
+}
+
+else if(found){
+
+document.getElementById("result").innerHTML="<span style='color:green;'>Train Found</span>";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="<span style='color:red;'>Train Not Found</span>";
+
+}
+
+}
+
+function bookTrain(train){
+
+alert("Ticket Booked Successfully!\n\nTrain: "+train);
+
+}
+
+</script>
+
+</body>
+</html>

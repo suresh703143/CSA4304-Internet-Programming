@@ -1,0 +1,183 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Verdana,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffe6f2,#f5e6ff);
+}
+
+header{
+background:#8e24aa;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffd54f;
+}
+
+section{
+width:90%;
+margin:25px auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+color:#8e24aa;
+margin-bottom:20px;
+}
+
+.search{
+text-align:center;
+}
+
+.search input{
+width:300px;
+padding:12px;
+border:2px solid #8e24aa;
+border-radius:25px;
+}
+
+.search button{
+padding:12px 25px;
+background:#ec407a;
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.card{
+width:250px;
+background:#fff0f6;
+padding:20px;
+text-align:center;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card button{
+margin-top:15px;
+padding:10px 20px;
+background:#8e24aa;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+.stylist-box{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.stylist{
+width:220px;
+background:#f3e5f5;
+padding:20px;
+text-align:center;
+border-radius:50%;
+height:220px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+ul{
+margin-left:30px;
+line-height:35px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:60%;
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:1px solid #999;
+}
+
+.contact textarea{
+height:120px;
+}
+
+.contact button{
+padding:12px 30px;
+background:#ec407a;
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer;
+}
+
+footer{
+background:#8e24aa;
+color:white;
+text-align:center;
+padding:18px;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+
+.cards,
+.stylist-box{
+flex-direction:column;
+align-items:center;
+}
+
+.card,
+.stylist{
+width:90%;
+height:auto;
+border-radius:15px;
+}
+
+.search input,
+.contact input,
+.contact textarea{
+width:90%;
+}
+
+nav a{
+display:block;
+margin:10px;
+}
+
+}

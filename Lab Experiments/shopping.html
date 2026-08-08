@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Electronics Shopping System</title>
+<link rel="stylesheet" href="shopping.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>TECHSAVVY ONLINE ELECTRONICS STORE</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#offers">Offers</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="search">
+
+<h2>Search Products</h2>
+
+<input type="text" id="searchBox" placeholder="Search Electronics">
+
+<button onclick="searchProduct()">Search</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="product-container" id="products">
+
+<h2>Popular Products</h2>
+
+<div class="product-card">
+
+<h3 class="product">iPhone 16</h3>
+
+<p>Category : Smartphone</p>
+
+<p>Price : ₹79,999</p>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<button onclick="buyProduct('iPhone 16')">Buy Now</button>
+
+</div>
+
+<div class="product-card">
+
+<h3 class="product">Dell Inspiron Laptop</h3>
+
+<p>Category : Laptop</p>
+
+<p>Price : ₹62,000</p>
+
+<p>⭐⭐⭐⭐</p>
+
+<button onclick="buyProduct('Dell Inspiron Laptop')">Buy Now</button>
+
+</div>
+
+<div class="product-card">
+
+<h3 class="product">Samsung Galaxy Tab</h3>
+
+<p>Category : Tablet</p>
+
+<p>Price : ₹35,000</p>
+
+<p>⭐⭐⭐⭐⭐</p>
+
+<button onclick="buyProduct('Samsung Galaxy Tab')">Buy Now</button>
+
+</div>
+
+</section>
+
+<section id="offers">
+
+<h2>Customer Features</h2>
+
+<ul>
+
+<li>User Registration</li>
+
+<li>User Login</li>
+
+<li>Browse Products</li>
+
+<li>Search & Filter Products</li>
+
+<li>Add to Cart</li>
+
+<li>Wishlist</li>
+
+<li>Secure Payment</li>
+
+<li>Order Tracking</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Admin Features</h2>
+
+<ul>
+
+<li>Admin Login</li>
+
+<li>Add Products</li>
+
+<li>Update Product Details</li>
+
+<li>Delete Products</li>
+
+<li>Manage Orders</li>
+
+<li>Manage Customers</li>
+
+</ul>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name">
+
+<input type="email" placeholder="Enter Email">
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button>Submit</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 TechSavvy Electronics Store</p>
+
+</footer>
+
+<script>
+
+function searchProduct(){
+
+let input=document.getElementById("searchBox").value.toLowerCase();
+
+let products=document.getElementsByClassName("product");
+
+let found=false;
+
+for(let i=0;i<products.length;i++){
+
+let name=products[i].innerHTML.toLowerCase();
+
+if(name.includes(input)||input==""){
+
+products[i].parentElement.style.display="block";
+
+if(input!="")
+found=true;
+
+}
+
+else{
+
+products[i].parentElement.style.display="none";
+
+}
+
+}
+
+document.getElementById("result").innerHTML=found?
+
+"<span style='color:green;'>Product Found</span>":
+
+(input==""?"":"<span style='color:red;'>Product Not Found</span>");
+
+}
+
+function buyProduct(name){
+
+alert("Order Placed Successfully!\n\nProduct : "+name);
+
+}
+
+</script>
+
+</body>
+</html>

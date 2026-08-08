@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Flight Reservation System</title>
+<link rel="stylesheet" href="flight.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>ONLINE FLIGHT RESERVATION SYSTEM</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#search">Search Flights</a>
+<a href="#flights">Flights</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="search" id="search">
+
+<h2>Search Flights</h2>
+
+<input type="text" id="destination" placeholder="Enter Destination">
+
+<button onclick="searchFlight()">Search</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="flight-container" id="flights">
+
+<h2>Available Flights</h2>
+
+<div class="flight-card">
+
+<h3 class="flight">Chennai → Delhi</h3>
+
+<p><b>Airline:</b> IndiGo</p>
+
+<p><b>Departure:</b> 08:00 AM</p>
+
+<p><b>Class:</b> Economy / Business</p>
+
+<p><b>Fare:</b> ₹5,500</p>
+
+<p><b>Seats:</b> 25 Available</p>
+
+<button onclick="bookFlight('Chennai → Delhi')">Book Ticket</button>
+
+</div>
+
+<div class="flight-card">
+
+<h3 class="flight">Hyderabad → Mumbai</h3>
+
+<p><b>Airline:</b> Air India</p>
+
+<p><b>Departure:</b> 02:30 PM</p>
+
+<p><b>Class:</b> Economy / Business</p>
+
+<p><b>Fare:</b> ₹6,200</p>
+
+<p><b>Seats:</b> 18 Available</p>
+
+<button onclick="bookFlight('Hyderabad → Mumbai')">Book Ticket</button>
+
+</div>
+
+<div class="flight-card">
+
+<h3 class="flight">Bangalore → Kolkata</h3>
+
+<p><b>Airline:</b> SpiceJet</p>
+
+<p><b>Departure:</b> 06:45 PM</p>
+
+<p><b>Class:</b> Economy / Business</p>
+
+<p><b>Fare:</b> ₹7,000</p>
+
+<p><b>Seats:</b> 30 Available</p>
+
+<button onclick="bookFlight('Bangalore → Kolkata')">Book Ticket</button>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>User Features</h2>
+
+<ul>
+<li>User Registration</li>
+<li>User Login</li>
+<li>Search Flights</li>
+<li>Select Seats</li>
+<li>Book Tickets</li>
+<li>Online Payment</li>
+<li>Booking History</li>
+<li>Travel Itinerary</li>
+</ul>
+
+</section>
+
+<section class="features">
+
+<h2>Admin Features</h2>
+
+<ul>
+<li>Admin Login</li>
+<li>Add Flight</li>
+<li>Update Flight Schedule</li>
+<li>Delete Flight</li>
+<li>Manage Seat Availability</li>
+<li>Manage User Accounts</li>
+</ul>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name">
+
+<input type="email" placeholder="Enter Email">
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Online Flight Reservation System</p>
+
+</footer>
+
+<script>
+
+function searchFlight(){
+
+let input=document.getElementById("destination").value.toLowerCase();
+
+let flights=document.getElementsByClassName("flight");
+
+let found=false;
+
+for(let i=0;i<flights.length;i++){
+
+let name=flights[i].innerHTML.toLowerCase();
+
+if(name.includes(input) || input==""){
+
+flights[i].parentElement.style.display="block";
+
+if(input!="")
+found=true;
+
+}
+else{
+
+flights[i].parentElement.style.display="none";
+
+}
+
+}
+
+if(input==""){
+
+document.getElementById("result").innerHTML="";
+
+}
+else if(found){
+
+document.getElementById("result").innerHTML="<span style='color:green;'>Flight Found</span>";
+
+}
+else{
+
+document.getElementById("result").innerHTML="<span style='color:red;'>Flight Not Found</span>";
+
+}
+
+}
+
+function bookFlight(flight){
+
+alert("Flight Ticket Booked Successfully!\n\nFlight: "+flight);
+
+}
+
+</script>
+
+</body>
+</html>

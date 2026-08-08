@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hotel Booking System</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+
+<header>
+    <h1>ONLINE HOTEL BOOKING SYSTEM</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#search">Search</a>
+        <a href="#hotels">Hotels</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="search" class="search">
+    <h2>Search Hotels</h2>
+
+    <input type="text" id="place" placeholder="Enter Destination">
+
+    <button onclick="searchHotel()">Search</button>
+
+    <p id="result"></p>
+</section>
+
+<section id="hotels" class="hotel-container">
+
+<h2>Available Hotels</h2>
+
+<div class="hotel-card">
+    <h3 class="hotel">Taj Hotel - Chennai</h3>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Price: ₹5000 / Night</p>
+    <p>Free Wi-Fi | Swimming Pool | Breakfast</p>
+    <button onclick="bookHotel('Taj Hotel')">Book Now</button>
+</div>
+
+<div class="hotel-card">
+    <h3 class="hotel">ITC Grand - Hyderabad</h3>
+    <p>⭐⭐⭐⭐</p>
+    <p>Price: ₹4000 / Night</p>
+    <p>Free Parking | Restaurant | AC Rooms</p>
+    <button onclick="bookHotel('ITC Grand')">Book Now</button>
+</div>
+
+<div class="hotel-card">
+    <h3 class="hotel">Marriott - Bangalore</h3>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Price: ₹6500 / Night</p>
+    <p>Gym | Pool | Free Breakfast</p>
+    <button onclick="bookHotel('Marriott')">Book Now</button>
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>User Features</h2>
+
+<ul>
+<li>User Registration</li>
+<li>User Login</li>
+<li>Search Hotels</li>
+<li>Book Rooms</li>
+<li>View Booking History</li>
+<li>Cancel Booking</li>
+<li>Online Payment</li>
+<li>Leave Reviews</li>
+</ul>
+
+</section>
+
+<section class="features">
+
+<h2>Admin Features</h2>
+
+<ul>
+<li>Admin Login</li>
+<li>Add Hotel</li>
+<li>Update Hotel Details</li>
+<li>Delete Hotel</li>
+<li>Manage Room Availability</li>
+<li>Manage Users</li>
+</ul>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name" required>
+
+<input type="email" placeholder="Enter Email" required>
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Online Hotel Booking System</p>
+
+</footer>
+
+<script>
+
+function searchHotel(){
+
+let input=document.getElementById("place").value.toLowerCase();
+
+let hotels=document.getElementsByClassName("hotel");
+
+let found=false;
+
+for(let i=0;i<hotels.length;i++){
+
+let name=hotels[i].innerText.toLowerCase();
+
+if(name.includes(input) || input==""){
+
+hotels[i].parentElement.style.display="block";
+
+if(input!="")
+found=true;
+
+}
+else{
+
+hotels[i].parentElement.style.display="none";
+
+}
+
+}
+
+if(input==""){
+
+document.getElementById("result").innerHTML="";
+
+}
+else if(found){
+
+document.getElementById("result").innerHTML="<span style='color:green'>Hotel Found</span>";
+
+}
+else{
+
+document.getElementById("result").innerHTML="<span style='color:red'>Hotel Not Found</span>";
+
+}
+
+}
+
+function bookHotel(name){
+
+alert("Room booked successfully at " + name);
+
+}
+
+</script>
+
+</body>
+</html>
