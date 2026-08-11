@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Library Management System</title>
+ <link rel="stylesheet" href="library.css">
+</head>
+<body>
+<header>
+ <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+    <nav>
+    <a href="#">Home</a>
+    <a href="#books">Books</a>
+    <a href="#admin">Admin</a>
+    <a href="#student">Student</a>
+    <a href="#contact">Contact</a>
+    </nav>
+</header>
+<section class="search">
+  <h2>Search Books</h2>
+  <input type="text" id="searchBook" placeholder="Enter Book Name">
+  <button onclick="searchBook()">Search</button>
+  <br><br>
+  <p id="result"></p>
+</section>
+<!-- Books -->
+<section class="books" id="books">
+<h2>Available Books</h2>
+<div class="card">
+<h3 class="book">Java Programming</h3>
+<p><b>Author:</b> Herbert Schildt</p>
+<button onclick="borrowBook('Java Programming')">Borrow</button>
+</div>
+<div class="card">
+<h3 class="book">Python Programming</h3>
+<p><b>Author:</b> Mark Lutz</p>
+<button onclick="borrowBook('Python Programming')">Borrow</button>
+</div>
+<div class="card">
+<h3 class="book">Database Management System</h3>
+<p><b>Author:</b> Navathe</p>
+<button onclick="borrowBook('Database Management System')">Borrow</button>
+</div>
+<div class="card">
+<h3 class="book">Operating System</h3>
+<p><b>Author:</b> Galvin</p>
+<button onclick="borrowBook('Operating System')">Borrow</button>
+</div>
+<div class="card">
+<h3 class="book">Computer Networks</h3>
+<p><b>Author:</b> Forouzan</p>
+<button onclick="borrowBook('Computer Networks')">Borrow</button>
+</div>
+<div class="card">
+<h3 class="book">Data Structures</h3>
+<p><b>Author:</b> Seymour Lipschutz</p>
+<button onclick="borrowBook('Data Structures')">Borrow</button>
+</div>
+</section>
+<!-- Admin -->
+<section class="admin" id="admin">
+<h2>Admin Features</h2>
+<ul>
+<li>Admin Login</li>
+<li>Add Book</li>
+<li>Update Book</li>
+<li>Delete Book</li>
+<li>Issue Book</li>
+<li>Return Book</li>
+<li>Calculate Fine</li>
+<li>Upload Study Materials</li>
+<li>View Materials</li>
+</ul>
+</section>+
+<!-- Student -->
+<section class="student" id="student">
+<h2>Student Features</h2>
+<ul>
+<li>Student Registration</li>
+<li>Student Login</li>
+<li>Search Books</li>
+<li>Borrow Books</li>
+<li>Borrow History</li>
+<li>Check Fine</li>
+<li>Download Study Material</li>
+<li>My Profile</li>
+</ul>
+</section>
+<!-- Materials -->
+<section class="materials">
+<h2>Study Materials</h2>
+<table>
+<tr>
+<th>Year</th>
+<th>Semester</th>
+<th>Material</th>
+</tr>
+<tr>
+<td>II Year</td>
+<td>III Semester</td>
+<td><a href="#">Download</a></td>
+</tr>
+<tr>
+<td>II Year</td>
+<td>IV Semester</td>
+<td><a href="#">Download</a></td>
+</tr>
+<tr>
+<td>III Year</td>
+<td>V Semester</td>
+<td><a href="#">Download</a></td>
+</tr>
+</table>
+</section>
+<!-- Contact -->
+<section class="contact" id="contact">
+<h2>Contact Library</h2>
+<form>
+<input type="text" placeholder="Enter Name" required>
+<input type="email" placeholder="Enter Email" required>
+<textarea placeholder="Enter Message"></textarea>
+<button type="submit">Submit</button>
+</form>
+</section>
+<footer>
+<p>© 2026 Library Management System | Saveetha School of Engineering</p>
+</footer>
+<script>
+function searchBook(){
+let input=document.getElementById("searchBook").value.toLowerCase().trim();
+let books=document.getElementsByClassName("book");
+let found=false;
+for(let i=0;i<books.length;i++){
+let title=books[i].innerText.toLowerCase();
+if(title.includes(input) || input==""){
+books[i].parentElement.style.display="block";
+if(input!=""){
+found=true;
+}
+}
+else{
+books[i].parentElement.style.display="none";
+}
+}
+if(input==""){
+document.getElementById("result").innerHTML="";
+}
+else if(found){
+document.getElementById("result").innerHTML="<span style='color:green;font-weight:bold;'>Book Found</span>";
+}
+else{
+document.getElementById("result").innerHTML="<span style='color:red;font-weight:bold;'>Book Not Found</span>";
+}
+}
+function borrowBook(book){
+alert(book + " borrowed successfully!");
+}
+</script>
+</body>
+</html>
