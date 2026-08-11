@@ -1,0 +1,175 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Trebuchet MS',sans-serif;
+}
+
+body{
+background:#eef4ff;
+}
+
+header{
+background:#1e3a8a;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:18px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffeb3b;
+}
+
+section{
+width:90%;
+margin:25px auto;
+padding:25px;
+background:white;
+border-radius:15px;
+box-shadow:0 5px 12px rgba(0,0,0,.2);
+}
+
+h2{
+text-align:center;
+color:#1e3a8a;
+margin-bottom:20px;
+}
+
+.search{
+text-align:center;
+}
+
+.search input{
+width:320px;
+padding:12px;
+border:2px solid #1e3a8a;
+border-radius:30px;
+}
+
+.search button{
+padding:12px 25px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+.product-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.product-card{
+width:260px;
+background:#f8fbff;
+padding:20px;
+text-align:center;
+border-radius:15px;
+border-top:6px solid #1e3a8a;
+transition:.3s;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+}
+
+.product-card h3{
+color:#1e3a8a;
+margin-bottom:10px;
+}
+
+.product-card p{
+margin:8px 0;
+}
+
+.product-card button{
+margin-top:15px;
+padding:10px 20px;
+background:#1e3a8a;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+.product-card button:hover{
+background:#0f2557;
+}
+
+ul{
+margin-left:30px;
+line-height:35px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:60%;
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:1px solid gray;
+}
+
+.contact textarea{
+height:120px;
+}
+
+.contact button{
+padding:12px 30px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+footer{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:18px;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+
+.product-container{
+flex-direction:column;
+align-items:center;
+}
+
+.product-card{
+width:90%;
+}
+
+.search input,
+.contact input,
+.contact textarea{
+width:90%;
+}
+
+nav a{
+display:block;
+margin:10px;
+}
+
+}

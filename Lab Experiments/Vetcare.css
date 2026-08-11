@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f5f8f4;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sections */
+
+section {
+    width: 90%;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    text-align: center;
+    background: #e8f5e9;
+}
+
+.welcome p {
+    font-size: 17px;
+}
+
+
+/* Forms */
+
+.register,
+.consult {
+    text-align: center;
+}
+
+.register input,
+.consult input,
+.consult select,
+.consult textarea {
+    display: block;
+    width: 350px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.consult textarea {
+    height: 100px;
+}
+
+.consult label {
+    display: block;
+    margin: 15px;
+}
+
+
+/* Buttons */
+
+button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #1b5e20;
+}
+
+
+/* Doctors */
+
+.doctor-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.doctor {
+    width: 270px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.doctor h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.doctor p {
+    margin: 8px;
+}
+
+
+/* Payment */
+
+.payment {
+    text-align: center;
+    background: #e8f5e9;
+}
+
+
+/* Diseases */
+
+.disease-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.disease-box div {
+    width: 270px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.disease-box h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+
+/* Analysis */
+
+.analysis {
+    background: #f1f8e9;
+}
+
+.analysis p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.analysis ul {
+    width: 300px;
+    max-width: 90%;
+    margin: auto;
+    line-height: 30px;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .doctor {
+        width: 90%;
+    }
+
+    .register input,
+    .consult input,
+    .consult select,
+    .consult textarea {
+        width: 90%;
+    }
+
+}

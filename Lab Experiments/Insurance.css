@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f8f7;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #00695c;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    margin-bottom: 6px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+
+/* Sections */
+
+section {
+    width: 90%;
+    margin: 25px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #ccc;
+}
+
+h2 {
+    text-align: center;
+    color: #00695c;
+    margin-bottom: 20px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    text-align: center;
+    background: #e0f2f1;
+}
+
+.welcome h2 {
+    font-size: 30px;
+}
+
+.welcome p {
+    font-size: 17px;
+    line-height: 28px;
+}
+
+
+/* Compare */
+
+.compare {
+    text-align: center;
+}
+
+.compare select,
+.compare input {
+    width: 230px;
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    padding: 11px 22px;
+    background: #00695c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #004d40;
+}
+
+
+/* Policies */
+
+.policy-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.policy-card {
+    width: 280px;
+    padding: 22px;
+    background: #f8ffff;
+    border: 1px solid #ddd;
+    border-top: 5px solid #00695c;
+    border-radius: 8px;
+}
+
+.policy-card h3 {
+    color: #00695c;
+    margin-bottom: 15px;
+}
+
+.policy-card p {
+    margin: 10px 0;
+}
+
+
+/* Dashboard */
+
+.dashboard-box {
+    width: 400px;
+    margin: auto;
+    padding: 22px;
+    background: #e8f5e9;
+    border-left: 5px solid #00695c;
+    border-radius: 8px;
+}
+
+.dashboard-box h3 {
+    color: #00695c;
+    margin-bottom: 15px;
+}
+
+.dashboard-box p {
+    margin: 10px 0;
+}
+
+.warning {
+    color: #d84315;
+    font-weight: bold;
+}
+
+
+/* Features */
+
+.features ul {
+    margin-left: 30px;
+    line-height: 32px;
+}
+
+
+/* Agent */
+
+.agent {
+    text-align: center;
+}
+
+.agent-box {
+    display: inline-block;
+    width: 40%;
+    margin: 10px;
+    padding: 20px;
+    background: #e0f2f1;
+    border-radius: 8px;
+    vertical-align: top;
+}
+
+.agent-box h3 {
+    color: #00695c;
+    margin-bottom: 10px;
+}
+
+.agent-box p {
+    margin: 10px;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact input,
+.contact textarea {
+    display: block;
+    width: 70%;
+    padding: 12px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    height: 100px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #00695c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .compare input,
+    .compare select {
+        width: 90%;
+    }
+
+    .policy-card {
+        width: 90%;
+    }
+
+    .dashboard-box {
+        width: 90%;
+    }
+
+    .agent-box {
+        width: 90%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 90%;
+    }
+}

@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7f5;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #286c4a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd54f;
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    background: #dff0e6;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #286c4a;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* Search */
+
+.search {
+    width: 90%;
+    margin: 25px auto;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.search h2 {
+    color: #286c4a;
+    margin-bottom: 20px;
+}
+
+.search input,
+.search select {
+    padding: 12px;
+    width: 220px;
+    margin: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 22px;
+    background: #286c4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d5137;
+}
+
+
+/* Properties */
+
+#properties {
+    width: 90%;
+    margin: 30px auto;
+}
+
+#properties h2 {
+    text-align: center;
+    color: #286c4a;
+    margin-bottom: 20px;
+}
+
+.properties {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    border-top: 5px solid #286c4a;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.card h3 {
+    color: #286c4a;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+
+/* About */
+
+.about {
+    width: 90%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.about h2 {
+    color: #286c4a;
+    margin-bottom: 15px;
+}
+
+.about p {
+    line-height: 28px;
+}
+
+
+/* Features */
+
+.features {
+    width: 90%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.features h2 {
+    color: #286c4a;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.features ul {
+    margin-left: 30px;
+    line-height: 32px;
+}
+
+
+/* Contact */
+
+.contact {
+    width: 90%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    color: #286c4a;
+    margin-bottom: 15px;
+}
+
+.contact input,
+.contact textarea {
+    display: block;
+    width: 70%;
+    padding: 12px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    height: 100px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #286c4a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .search input,
+    .search select {
+        width: 90%;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #3949ab;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sections */
+
+section {
+    width: 90%;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #3949ab;
+    margin-bottom: 20px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    text-align: center;
+    background: #e8eaf6;
+}
+
+.welcome p {
+    font-size: 17px;
+}
+
+
+/* Complaint Form */
+
+.complaint {
+    text-align: center;
+}
+
+.complaint input,
+.complaint select,
+.complaint textarea {
+    display: block;
+    width: 400px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.complaint textarea {
+    height: 120px;
+}
+
+.complaint label {
+    display: block;
+    margin-top: 15px;
+}
+
+
+button {
+    background: #3949ab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #283593;
+}
+
+
+/* Status */
+
+.status {
+    text-align: center;
+}
+
+.status input {
+    width: 300px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.status-box {
+    width: 350px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #e8eaf6;
+    border-radius: 8px;
+}
+
+.status-box h3 {
+    color: #3949ab;
+    margin-bottom: 10px;
+}
+
+.status-box p {
+    margin: 8px;
+}
+
+
+/* History */
+
+.history {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: #3949ab;
+    color: white;
+}
+
+
+/* Issues */
+
+.issues ul {
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #3949ab;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .complaint input,
+    .complaint select,
+    .complaint textarea {
+        width: 90%;
+    }
+
+}

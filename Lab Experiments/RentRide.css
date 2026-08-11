@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sections */
+
+section {
+    width: 90%;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #263238;
+    margin-bottom: 20px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    text-align: center;
+    background: #eceff1;
+}
+
+.welcome p {
+    font-size: 17px;
+}
+
+
+/* Search */
+
+.search {
+    text-align: center;
+}
+
+.search input,
+.search select {
+    width: 210px;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+
+/* Buttons */
+
+button {
+    background: #263238;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #455a64;
+}
+
+
+/* Vehicles */
+
+.vehicles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.vehicle {
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.vehicle h3 {
+    color: #263238;
+    margin: 10px;
+}
+
+.vehicle p {
+    margin: 8px;
+}
+
+.vehicle-image {
+    height: 100px;
+    padding: 20px;
+    font-size: 50px;
+    background: #eceff1;
+    border-radius: 5px;
+}
+
+
+/* Booking */
+
+.booking {
+    text-align: center;
+}
+
+.booking input,
+.booking select {
+    display: block;
+    width: 350px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+
+/* History */
+
+.history {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: #263238;
+    color: white;
+}
+
+
+/* Features */
+
+.features ul {
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .search input,
+    .search select {
+        width: 90%;
+    }
+
+    .vehicle {
+        width: 90%;
+    }
+
+    .booking input,
+    .booking select {
+        width: 90%;
+    }
+
+}

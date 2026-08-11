@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Hospital Appointment Booking</title>
+<link rel="stylesheet" href="hospital.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>ONLINE HOSPITAL APPOINTMENT BOOKING</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#search">Doctors</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="search" id="search">
+
+<h2>Find a Doctor</h2>
+
+<input type="text" id="doctorSearch" placeholder="Enter Doctor or Specialty">
+
+<button onclick="searchDoctor()">Search</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="doctor-container">
+
+<h2>Available Doctors</h2>
+
+<div class="doctor-card">
+
+<h3 class="doctor">Dr. Priya - Cardiologist</h3>
+
+<p>Experience : 12 Years</p>
+
+<p>Available : 10:00 AM - 1:00 PM</p>
+
+<button onclick="bookAppointment('Dr. Priya')">Book Appointment</button>
+
+</div>
+
+<div class="doctor-card">
+
+<h3 class="doctor">Dr. Rahul - Orthopedic</h3>
+
+<p>Experience : 10 Years</p>
+
+<p>Available : 2:00 PM - 6:00 PM</p>
+
+<button onclick="bookAppointment('Dr. Rahul')">Book Appointment</button>
+
+</div>
+
+<div class="doctor-card">
+
+<h3 class="doctor">Dr. Meena - Dermatologist</h3>
+
+<p>Experience : 8 Years</p>
+
+<p>Available : 9:00 AM - 12:00 PM</p>
+
+<button onclick="bookAppointment('Dr. Meena')">Book Appointment</button>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2>Patient Features</h2>
+
+<ul>
+<li>Patient Registration</li>
+<li>Patient Login</li>
+<li>Search Doctors</li>
+<li>Book Appointment</li>
+<li>Cancel Appointment</li>
+<li>View Appointment History</li>
+<li>Update Profile</li>
+<li>Email / SMS Reminder</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Admin Features</h2>
+
+<ul>
+<li>Admin Login</li>
+<li>Add Doctors</li>
+<li>Update Doctor Schedule</li>
+<li>Delete Doctors</li>
+<li>Manage Patients</li>
+<li>Manage Appointments</li>
+</ul>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Hospital</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name">
+
+<input type="email" placeholder="Enter Email">
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button>Submit</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 MedCare Hospital Appointment Booking System</p>
+
+</footer>
+
+<script>
+
+function searchDoctor(){
+
+let input=document.getElementById("doctorSearch").value.toLowerCase();
+
+let doctors=document.getElementsByClassName("doctor");
+
+let found=false;
+
+for(let i=0;i<doctors.length;i++){
+
+let name=doctors[i].innerHTML.toLowerCase();
+
+if(name.includes(input)||input==""){
+
+doctors[i].parentElement.style.display="block";
+
+if(input!="") found=true;
+
+}
+
+else{
+
+doctors[i].parentElement.style.display="none";
+
+}
+
+}
+
+document.getElementById("result").innerHTML=found ?
+
+"<span style='color:green;'>Doctor Available</span>"
+
+:
+
+(input=="" ? "" : "<span style='color:red;'>Doctor Not Found</span>");
+
+}
+
+function bookAppointment(name){
+
+alert("Appointment Booked Successfully!\n\nDoctor : "+name);
+
+}
+
+</script>
+
+</body>
+</html>

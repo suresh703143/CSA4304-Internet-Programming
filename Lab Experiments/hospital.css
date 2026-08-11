@@ -1,0 +1,175 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Calibri,sans-serif;
+}
+
+body{
+background:#eef8ff;
+}
+
+header{
+background:#009688;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:18px;
+font-weight:bold;
+font-size:18px;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+section{
+width:90%;
+margin:25px auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 12px rgba(0,0,0,.2);
+}
+
+h2{
+text-align:center;
+color:#009688;
+margin-bottom:20px;
+}
+
+.search{
+text-align:center;
+}
+
+.search input{
+width:320px;
+padding:12px;
+border:2px solid #009688;
+border-radius:25px;
+}
+
+.search button{
+padding:12px 25px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer;
+}
+
+.doctor-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.doctor-card{
+width:260px;
+background:#f5fffd;
+padding:20px;
+border-radius:15px;
+text-align:center;
+border-left:6px solid #009688;
+transition:.3s;
+}
+
+.doctor-card:hover{
+transform:scale(1.05);
+}
+
+.doctor-card h3{
+color:#009688;
+margin-bottom:10px;
+}
+
+.doctor-card p{
+margin:8px 0;
+}
+
+.doctor-card button{
+margin-top:15px;
+padding:10px 20px;
+background:#009688;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+.doctor-card button:hover{
+background:#00796b;
+}
+
+ul{
+margin-left:30px;
+line-height:35px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:60%;
+padding:12px;
+margin:10px;
+border:1px solid gray;
+border-radius:10px;
+}
+
+.contact textarea{
+height:120px;
+}
+
+.contact button{
+padding:12px 30px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+footer{
+background:#009688;
+color:white;
+text-align:center;
+padding:18px;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+
+.doctor-container{
+flex-direction:column;
+align-items:center;
+}
+
+.doctor-card{
+width:90%;
+}
+
+.search input,
+.contact input,
+.contact textarea{
+width:90%;
+}
+
+nav a{
+display:block;
+margin:10px;
+}
+
+}

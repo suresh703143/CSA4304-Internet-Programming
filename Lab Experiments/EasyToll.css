@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f4f7fa;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sections */
+
+section {
+    width: 90%;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    text-align: center;
+    background: #e3f2fd;
+}
+
+.welcome p {
+    font-size: 17px;
+}
+
+
+/* Forms */
+
+.vehicle,
+.toll {
+    text-align: center;
+}
+
+.vehicle input,
+.vehicle select,
+.toll select {
+    width: 250px;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+
+/* Toll */
+
+.amount {
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Balance */
+
+.balance {
+    text-align: center;
+}
+
+.balance-box {
+    width: 300px;
+    margin: auto;
+    padding: 25px;
+    background: #e3f2fd;
+    border-radius: 8px;
+}
+
+.balance-box h3 {
+    color: #1565c0;
+}
+
+.balance-box p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+
+/* History */
+
+.history {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: #1565c0;
+    color: white;
+}
+
+
+/* Features */
+
+.features ul {
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .vehicle input,
+    .vehicle select,
+    .toll select {
+        width: 90%;
+    }
+
+    .balance-box {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Parlour Appointment Booking</title>
+<link rel="stylesheet" href="beauty.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>BEAUTY PARLOUR APPOINTMENT BOOKING</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#stylists">Stylists</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="search">
+
+<h2>Book Your Appointment</h2>
+
+<input type="text" id="service" placeholder="Enter Service">
+
+<button onclick="searchService()">Search</button>
+
+<p id="result"></p>
+
+</section>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3 class="service">Bridal Makeup</h3>
+
+<p>Duration : 3 Hours</p>
+
+<p>Price : ₹3500</p>
+
+<button onclick="book('Bridal Makeup')">Book Now</button>
+
+</div>
+
+<div class="card">
+
+<h3 class="service">Hair Spa</h3>
+
+<p>Duration : 60 Minutes</p>
+
+<p>Price : ₹1200</p>
+
+<button onclick="book('Hair Spa')">Book Now</button>
+
+</div>
+
+<div class="card">
+
+<h3 class="service">Facial Treatment</h3>
+
+<p>Duration : 45 Minutes</p>
+
+<p>Price : ₹900</p>
+
+<button onclick="book('Facial Treatment')">Book Now</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="stylists">
+
+<h2>Our Stylists</h2>
+
+<div class="stylist-box">
+
+<div class="stylist">
+<h3>Priya</h3>
+<p>Hair Specialist</p>
+</div>
+
+<div class="stylist">
+<h3>Anjali</h3>
+<p>Makeup Artist</p>
+</div>
+
+<div class="stylist">
+<h3>Keerthi</h3>
+<p>Skin Care Expert</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>User Features</h2>
+
+<ul>
+<li>User Registration</li>
+<li>User Login</li>
+<li>Book Appointment</li>
+<li>Select Stylist</li>
+<li>Choose Date & Time</li>
+<li>Online Payment</li>
+<li>View Appointment</li>
+<li>Cancel / Reschedule Appointment</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Admin Features</h2>
+
+<ul>
+<li>Admin Login</li>
+<li>Add Services</li>
+<li>Manage Stylists</li>
+<li>Manage Appointments</li>
+<li>Update Time Slots</li>
+<li>Manage Users</li>
+</ul>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name">
+
+<input type="email" placeholder="Enter Email">
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button>Submit</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Beauty Parlour Appointment Booking System</p>
+
+</footer>
+
+<script>
+
+function searchService(){
+
+let input=document.getElementById("service").value.toLowerCase();
+
+let services=document.getElementsByClassName("service");
+
+let found=false;
+
+for(let i=0;i<services.length;i++){
+
+let name=services[i].innerHTML.toLowerCase();
+
+if(name.includes(input) || input==""){
+
+services[i].parentElement.style.display="block";
+
+if(input!="") found=true;
+
+}
+else{
+
+services[i].parentElement.style.display="none";
+
+}
+
+}
+
+document.getElementById("result").innerHTML=found ?
+"<span style='color:green;'>Service Available</span>"
+:
+(input=="" ? "" : "<span style='color:red;'>Service Not Available</span>");
+
+}
+
+function book(service){
+
+alert("Appointment Booked Successfully!\n\nService : "+service);
+
+}
+
+</script>
+
+</body>
+</html>

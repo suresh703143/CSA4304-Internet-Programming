@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Cake Ordering System</title>
+<link rel="stylesheet" href="cake.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>ONLINE CAKE ORDERING SYSTEM</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#search">Search Cakes</a>
+<a href="#cakes">Cakes</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="search" id="search">
+
+<h2>Search Cakes</h2>
+
+<input type="text" id="cakeSearch" placeholder="Enter Cake Name">
+
+<button onclick="searchCake()">Search</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="cake-container" id="cakes">
+
+<h2>Available Cakes</h2>
+
+<div class="cake-card">
+
+<h3 class="cake">Chocolate Cake</h3>
+
+<p><b>Flavor:</b> Chocolate</p>
+
+<p><b>Price:</b> ₹600</p>
+
+<p><b>Occasion:</b> Birthday</p>
+
+<button onclick="orderCake('Chocolate Cake')">Order Now</button>
+
+</div>
+
+<div class="cake-card">
+
+<h3 class="cake">Black Forest Cake</h3>
+
+<p><b>Flavor:</b> Vanilla & Chocolate</p>
+
+<p><b>Price:</b> ₹750</p>
+
+<p><b>Occasion:</b> Anniversary</p>
+
+<button onclick="orderCake('Black Forest Cake')">Order Now</button>
+
+</div>
+
+<div class="cake-card">
+
+<h3 class="cake">Red Velvet Cake</h3>
+
+<p><b>Flavor:</b> Red Velvet</p>
+
+<p><b>Price:</b> ₹900</p>
+
+<p><b>Occasion:</b> Wedding</p>
+
+<button onclick="orderCake('Red Velvet Cake')">Order Now</button>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>User Features</h2>
+
+<ul>
+<li>User Registration</li>
+<li>User Login</li>
+<li>Browse Cakes</li>
+<li>Customize Cake</li>
+<li>Place Order</li>
+<li>Online Payment</li>
+<li>Track Order</li>
+<li>Order History</li>
+</ul>
+
+</section>
+
+<section class="features">
+
+<h2>Admin Features</h2>
+
+<ul>
+<li>Admin Login</li>
+<li>Add Cake</li>
+<li>Update Cake Details</li>
+<li>Delete Cake</li>
+<li>Manage Orders</li>
+<li>Manage Users</li>
+</ul>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Enter Name">
+
+<input type="email" placeholder="Enter Email">
+
+<textarea placeholder="Enter Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Online Cake Ordering System</p>
+
+</footer>
+
+<script>
+
+function searchCake(){
+
+let input=document.getElementById("cakeSearch").value.toLowerCase();
+
+let cakes=document.getElementsByClassName("cake");
+
+let found=false;
+
+for(let i=0;i<cakes.length;i++){
+
+let name=cakes[i].innerHTML.toLowerCase();
+
+if(name.includes(input) || input==""){
+
+cakes[i].parentElement.style.display="block";
+
+if(input!="") found=true;
+
+}
+
+else{
+
+cakes[i].parentElement.style.display="none";
+
+}
+
+}
+
+if(input==""){
+
+document.getElementById("result").innerHTML="";
+
+}
+
+else if(found){
+
+document.getElementById("result").innerHTML="<span style='color:green;'>Cake Found</span>";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="<span style='color:red;'>Cake Not Found</span>";
+
+}
+
+}
+
+function orderCake(cake){
+
+alert("Order Placed Successfully!\n\nCake: "+cake);
+
+}
+
+</script>
+
+</body>
+</html>

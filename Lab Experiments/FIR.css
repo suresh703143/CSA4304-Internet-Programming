@@ -1,0 +1,185 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#222;
+}
+
+/* Header */
+
+header{
+    background:#263238;
+    color:white;
+    text-align:center;
+    padding:22px;
+}
+
+header h1{
+    margin-bottom:8px;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffca28;
+}
+
+/* Sections */
+
+section{
+    width:90%;
+    margin:25px auto;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 8px #ccc;
+}
+
+h2{
+    text-align:center;
+    color:#263238;
+    margin-bottom:20px;
+}
+
+/* Welcome */
+
+.welcome{
+    text-align:center;
+    background:#eceff1;
+}
+
+.welcome p{
+    font-size:18px;
+}
+
+/* Search */
+
+.search{
+    text-align:center;
+}
+
+.search input{
+    width:300px;
+    padding:12px;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+
+button{
+    padding:12px 20px;
+    background:#d32f2f;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b71c1c;
+}
+
+/* Fine Details */
+
+.details{
+    text-align:center;
+}
+
+.card{
+    width:350px;
+    margin:auto;
+    padding:20px;
+    border:1px solid #ddd;
+    border-left:5px solid #d32f2f;
+    border-radius:6px;
+    background:#fafafa;
+}
+
+.card h3{
+    color:#d32f2f;
+    margin-bottom:15px;
+}
+
+.card p{
+    margin:10px;
+}
+
+/* Police Form */
+
+.police form{
+    max-width:500px;
+    margin:auto;
+}
+
+.police input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+
+.police button{
+    width:100%;
+    margin-top:10px;
+}
+
+/* Features */
+
+.features ul{
+    margin-left:30px;
+    line-height:32px;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px;
+}
+
+/* Footer */
+
+footer{
+    background:#263238;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:25px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        margin:10px;
+    }
+
+    .search input{
+        width:90%;
+        margin-bottom:10px;
+    }
+
+    .card{
+        width:90%;
+    }
+
+}
