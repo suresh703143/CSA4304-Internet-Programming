@@ -1,0 +1,179 @@
+college {
+    display: block;
+    font-family: Arial, sans-serif;
+    background-color: #f2f6fa;
+    padding: 30px;
+}
+
+collegeName {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1e3a5f;
+    margin-bottom: 10px;
+}
+
+location,
+department {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin: 5px;
+    color: #555;
+}
+
+students {
+    display: block;
+    margin-top: 30px;
+}
+
+student {
+    display: block;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0px 3px 10px #ccc;
+}
+
+student::before {
+    content: "Student ID: " attr(id);
+    display: block;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+personalDetails {
+    display: block;
+    background-color: #eef5fb;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+personalDetails::before {
+    content: "Personal Details";
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a5f;
+    margin-bottom: 10px;
+}
+
+academicDetails {
+    display: block;
+    background-color: #f5f8ed;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+academicDetails::before {
+    content: "Academic Details";
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4b6b25;
+    margin-bottom: 10px;
+}
+
+address {
+    display: block;
+    background-color: #fff5e6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+address::before {
+    content: "Address";
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #9a5b00;
+    margin-bottom: 10px;
+}
+
+name,
+age,
+gender,
+email,
+phone,
+year,
+semester,
+section,
+cgpa,
+city,
+state,
+country {
+    display: block;
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+name::before {
+    content: "Name: ";
+    font-weight: bold;
+}
+
+age::before {
+    content: "Age: ";
+    font-weight: bold;
+}
+
+gender::before {
+    content: "Gender: ";
+    font-weight: bold;
+}
+
+email::before {
+    content: "Email: ";
+    font-weight: bold;
+}
+
+phone::before {
+    content: "Phone: ";
+    font-weight: bold;
+}
+
+year::before {
+    content: "Year: ";
+    font-weight: bold;
+}
+
+semester::before {
+    content: "Semester: ";
+    font-weight: bold;
+}
+
+section::before {
+    content: "Section: ";
+    font-weight: bold;
+}
+
+cgpa::before {
+    content: "CGPA: ";
+    font-weight: bold;
+}
+
+city::before {
+    content: "City: ";
+    font-weight: bold;
+}
+
+state::before {
+    content: "State: ";
+    font-weight: bold;
+}
+
+country::before {
+    content: "Country: ";
+    font-weight: bold;
+}
