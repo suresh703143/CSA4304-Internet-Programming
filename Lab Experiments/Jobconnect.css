@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sections */
+
+section {
+    width: 90%;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    text-align: center;
+    background: #e3f2fd;
+}
+
+.welcome p {
+    font-size: 17px;
+}
+
+
+/* Search */
+
+.search {
+    text-align: center;
+}
+
+.search input,
+.search select {
+    width: 220px;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+
+/* Button */
+
+button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+
+/* Jobs */
+
+.jobs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.job {
+    width: 280px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.job h3 {
+    color: #1565c0;
+    margin-bottom: 12px;
+}
+
+.job p {
+    margin: 8px 0;
+}
+
+
+/* Apply */
+
+.apply {
+    text-align: center;
+}
+
+.apply input,
+.apply select,
+.apply textarea {
+    display: block;
+    width: 350px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.apply textarea {
+    height: 100px;
+}
+
+.apply label {
+    display: block;
+    margin: 15px;
+}
+
+
+/* Saved Jobs */
+
+.saved-job {
+    width: 500px;
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 18px;
+    background: #e3f2fd;
+    border-radius: 7px;
+}
+
+.saved-job h3 {
+    color: #1565c0;
+    margin-bottom: 8px;
+}
+
+
+/* Features */
+
+.features ul {
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .search input,
+    .search select {
+        width: 90%;
+    }
+
+    .job {
+        width: 90%;
+    }
+
+    .apply input,
+    .apply select,
+    .apply textarea {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BloodCare - Blood Management System</title>
+    <link rel="stylesheet" href="blood.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>BloodCare</h1>
+    <p>Blood Management Information System</p>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#donors">Donors</a>
+        <a href="#blood">Blood Stock</a>
+        <a href="#register">Donate Blood</a>
+        <a href="#reports">Reports</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="welcome">
+
+    <h2>Save Lives Through Blood Donation</h2>
+
+    <p>
+        Manage blood donor records and check
+        blood availability easily.
+    </p>
+
+</section>
+
+
+<section class="search">
+
+    <h2>Search Blood</h2>
+
+    <select>
+        <option>Select Blood Group</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>O+</option>
+        <option>O-</option>
+    </select>
+
+    <input type="text" placeholder="Enter City">
+
+    <button>Search</button>
+
+</section>
+
+
+<section id="blood">
+
+    <h2>Available Blood Stock</h2>
+
+    <div class="blood-stock">
+
+        <div class="blood-card">
+            <h3>A+</h3>
+            <p>Available Units</p>
+            <strong>45</strong>
+        </div>
+
+        <div class="blood-card">
+            <h3>A-</h3>
+            <p>Available Units</p>
+            <strong>18</strong>
+        </div>
+
+        <div class="blood-card">
+            <h3>B+</h3>
+            <p>Available Units</p>
+            <strong>52</strong>
+        </div>
+
+        <div class="blood-card">
+            <h3>B-</h3>
+            <p>Available Units</p>
+            <strong>15</strong>
+        </div>
+
+        <div class="blood-card">
+            <h3>AB+</h3>
+            <p>Available Units</p>
+            <strong>20</strong>
+        </div>
+
+        <div class="blood-card">
+            <h3>O+</h3>
+            <p>Available Units</p>
+            <strong>60</strong>
+        </div>
+
+        <div class="blood-card">
+            <h3>O-</h3>
+            <p>Available Units</p>
+            <strong>12</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="donors">
+
+    <h2>Recent Blood Donors</h2>
+
+    <table>
+
+        <tr>
+            <th>Donor ID</th>
+            <th>Name</th>
+            <th>Blood Group</th>
+            <th>City</th>
+            <th>Last Donation</th>
+        </tr>
+
+        <tr>
+            <td>D101</td>
+            <td>Arun Kumar</td>
+            <td>A+</td>
+            <td>Chennai</td>
+            <td>10-08-2026</td>
+        </tr>
+
+        <tr>
+            <td>D102</td>
+            <td>Priya Sharma</td>
+            <td>O+</td>
+            <td>Bangalore</td>
+            <td>05-08-2026</td>
+        </tr>
+
+        <tr>
+            <td>D103</td>
+            <td>Rahul Raj</td>
+            <td>B+</td>
+            <td>Hyderabad</td>
+            <td>01-08-2026</td>
+        </tr>
+
+        <tr>
+            <td>D104</td>
+            <td>Meena Devi</td>
+            <td>AB+</td>
+            <td>Chennai</td>
+            <td>28-07-2026</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<section id="register" class="register">
+
+    <h2>Become a Blood Donor</h2>
+
+    <input type="text" placeholder="Full Name">
+
+    <input type="email" placeholder="Email Address">
+
+    <input type="tel" placeholder="Phone Number">
+
+    <select>
+        <option>Select Blood Group</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>O+</option>
+        <option>O-</option>
+    </select>
+
+    <input type="text" placeholder="City">
+
+    <input type="date">
+
+    <button>Register as Donor</button>
+
+</section>
+
+
+<section id="reports" class="reports">
+
+    <h2>Blood Donation Reports</h2>
+
+    <div class="report-box">
+
+        <div>
+            <h3>Total Donors</h3>
+            <p>1,250</p>
+        </div>
+
+        <div>
+            <h3>Blood Units Collected</h3>
+            <p>2,450</p>
+        </div>
+
+        <div>
+            <h3>Donations This Month</h3>
+            <p>185</p>
+        </div>
+
+        <div>
+            <h3>Blood Requests</h3>
+            <p>76</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="donation">
+
+    <h2>Recent Donation Activity</h2>
+
+    <p>
+        Blood donation camps and collection activities
+        are regularly monitored by the management.
+    </p>
+
+    <br>
+
+    <ul>
+        <li>Chennai Blood Camp - 85 Units Collected</li>
+        <li>Bangalore Blood Camp - 60 Units Collected</li>
+        <li>Hyderabad Blood Camp - 40 Units Collected</li>
+    </ul>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: support@bloodcare.com</p>
+
+    <p>Phone: 9876543210</p>
+
+    <p>Emergency Blood Helpline: 1800-123-456</p>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 BloodCare</p>
+
+    <p>Donate Blood • Save Lives</p>
+
+</footer>
+
+</body>
+
+</html>
